@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center bg-[var(--card-background)] w-[25rem] gap-12 border border-black p-12 rounded-lg shadow">
+    <section className="card  w-[25rem] gap-12">
 
       <h1 className="text-4xl">Home</h1>
 
@@ -13,7 +13,7 @@ export default function Home() {
         <button className="btn-secondary text-xl flex-1">Cancelar</button>
         <button className="btn-primary text-xl flex-1">Aceptar</button>
       </div>
-      
+
     </section>
   );
 }
