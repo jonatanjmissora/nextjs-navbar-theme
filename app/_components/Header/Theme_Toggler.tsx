@@ -16,8 +16,17 @@ const Theme_Toggler = () => {
       {
         theme === "light"
 
-          ? <SunSVG className="size-6 hover:rotate-180 hover:text-[var(--hover-primary)] duration-500" />
-          : <MoonSVG className="size-6 hover:rotate-235 hover:text-[var(--hover-primary)] duration-500" />
+          ? <span
+            className='flex items-center justify-center gap-4'>
+            Tema
+            <SunSVG className="size-6 hover:rotate-180 hover:text-[var(--hover-primary)] duration-500" />
+          </span>
+
+          : <span
+            className='flex items-center justify-center gap-4'>
+            Tema
+            <MoonSVG className="size-6 hover:rotate-235 hover:text-[var(--hover-primary)] duration-500" />
+          </span>
       }
     </button>
   )

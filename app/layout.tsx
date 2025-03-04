@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased  min-h-dvh w-dvw flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased  min-h-dvh w-dvw flex flex-col overflow-x-hidden relative`}
       >
         <ThemeProvider>
           <Header />

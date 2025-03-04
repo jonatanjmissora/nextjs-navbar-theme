@@ -6,8 +6,10 @@
 }
 
 :root {
+  --inset1: -2px -2px 2px rgba(60, 60, 60, 0.75);
+  --inset2: 2px 2px 2px rgba(100, 100, 100, 0.25);
   --background: linear-gradient(125deg, #aaa, #fff);
-  --card-background: linear-gradient(125deg, #fff, #aaa);
+  --card-background: linear-gradient(125deg, #ddd, #aaa);
   --foreground: #171717;
   --color-primary: #155dfc;
   --hover-primary: #193cb8;
@@ -20,9 +22,10 @@
 }
 
 [data-theme='dark'] {
+  --inset1: -2px -2px 2px rgba(10, 10, 10, 0.75);
+  --inset2: 2px 2px 2px rgba(80, 80, 80, 0.25);
   --background: linear-gradient(125deg, #111, #333);
-  --card-background: linear-gradient(125deg, #333, #f11);
-  ;
+  --card-background: linear-gradient(125deg, #222, #000);
   --foreground: #ededed;
 }
 
@@ -32,6 +35,36 @@ body {
   color: var(--foreground);
   background: var(--background);
   background-position: fixed;
+}
+
+.card {
+  box-shadow:
+    inset var(--inset1),
+    inset var(--inset2),
+    10px 5px 12px rgba(0, 0, 0, 0.5);
+  background: var(--card-background)
+}
+
+.movil-menu {
+  animation: reveal 0.5s ease-in-out forwards;
+}
+
+.movil-menu li {
+  opacity: 0;
+  animation: reveal 0.5s ease-in-out forwards;
+}
+
+
+@keyframes reveal {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @layer components {
@@ -52,7 +85,7 @@ body {
   }
 
   .link {
-    @apply font-bold px-4 py-0 tracking-widest cursor-pointer text-xl hover:text-[var(--color-link-hover)] transition-colors duration-300
+    @apply font-bold px-4 py-0 tracking-widest cursor-pointer hover:text-[var(--color-link-hover)] transition-colors duration-300 text-xl sm:text-sm 2xl:text-xl
   }
 
   .link.active {
@@ -60,6 +93,6 @@ body {
   }
 
   .card {
-    @apply flex flex-col items-center justify-center border border-black p-12 rounded-lg shadow
+    @apply flex flex-col items-center justify-center p-12 sm:p-6 2xl:p-12 rounded-lg w-[95%] sm:w-[20rem] 2xl:w-[25rem] gap-12 sm:gap-6 2xl:gap-12
   }
 }
