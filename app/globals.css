@@ -7,11 +7,21 @@
 
 :root {
   --background: linear-gradient(125deg, #aaa, #fff);
+  --card-background: linear-gradient(125deg, #fff, #aaa);
   --foreground: #171717;
+  --color-primary: #155dfc;
+  --hover-primary: #193cb8;
+  --color-secondary: #ac6a75;
+  --hover-secondary: #864751;
+  --color-link-active: #193cb8;
+  --color-link-hover: #155dfc;
+  --black: #222;
+  --white: #eee;
 }
 
 [data-theme='dark'] {
   --background: linear-gradient(125deg, #111, #333);
+  --card-background: linear-gradient(125deg, #333, #f11);;
   --foreground: #ededed;
 }
 
@@ -25,10 +35,24 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply bg-blue-950 px-6 py-3 rounded-lg tracking-widest shadow border-black cursor-pointer hover:bg-blue-800 transition-colors duration-300
+    @apply bg-[var(--color-primary)] px-6 py-3 rounded-lg tracking-widest shadow border-[var(--black)] cursor-pointer hover:bg-[var(--hover-primary)] transition-colors duration-300
+  }
+
+  .btn-secondary {
+    @apply bg-[var(--color-secondary)] px-6 py-3 rounded-lg tracking-widest shadow border-[var(--black)] cursor-pointer hover:bg-[var(--hover-secondary)] transition-colors duration-300
   }
 
   .input {
-    @apply px-4 py-2 rounded-lg shadow border-black
+    @apply px-4 py-2 rounded-lg shadow border-[var(--black)] bg-[var(--white)] text-[var(--black)] text-center text-lg
   }
+  .input:focus {
+    @apply bg-blue-300
+  }
+
+  .link { 
+    @apply font-bold px-4 py-0 tracking-widest cursor-pointer text-xl hover:text-[var(--color-link-hover)] transition-colors duration-300
+  }
+  .link.active {
+    @apply border-b text-[var(--color-link-active)] font-bold
+    }
 }
