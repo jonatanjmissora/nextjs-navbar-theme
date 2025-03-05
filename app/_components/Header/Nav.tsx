@@ -42,7 +42,7 @@ export default function Nav() {
       </button>
 
       {show &&
-        <div className="flex flex-col movil-menu fixed inset-0 bg-slate-900/95 text-[var(--white)]">
+        <div className="flex flex-col movil-menu fixed inset-0 bg-slate-900/97 text-[var(--white)]">
           <div className="w-full flex justify-end p-6">
             <button onClick={() => setShow(false)}><CancelSVG className="size-10" /></button>
           </div>
@@ -69,15 +69,9 @@ export default function Nav() {
 
             </ul>
 
-            <ul className="flex flex-col items-end gap-4 px-12">
+            <ul className="flex flex-col items-end gap-4 px-12 border-t border-slate-800 pt-8 w-full">
               <li
-                onClick={() => setShow(false)}
                 style={{ '--i': NavLinks.length, animationDelay: `${NavLinks.length * 0.1}s` } as React.CSSProperties}
-              >
-                Cerrar sesion
-              </li>
-              <li
-                style={{ '--i': (NavLinks.length + 1), animationDelay: `${(NavLinks.length + 1) * 0.1}s` } as React.CSSProperties}
               >
                 <Theme_Toggler />
               </li>
