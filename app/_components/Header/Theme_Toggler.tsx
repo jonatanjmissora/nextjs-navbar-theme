@@ -14,7 +14,7 @@ const Theme_Toggler = () => {
   return (
     <button onClick={handleClick}>
       {
-        theme === "light"
+        theme === "dark"
 
           ? <div
             className='flex items-center justify-center gap-4'>
