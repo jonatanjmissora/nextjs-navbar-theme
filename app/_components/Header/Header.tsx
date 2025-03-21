@@ -1,14 +1,25 @@
-import Link from "next/link";
-import Nav from "./Nav";
+
+import Link from 'next/link'
+import HeaderLink from './HeaderLink'
+import { NavLinks } from '@/app/_lib/constants'
+import ThemeSwitcher from './ThemeSwitcher'
 
 export default async function Header() {
 
   return (
-    <header className="flex justify-between items-center flex-wrap p-6 sm:p-4 2xl:p-8 px-6 sm:px-10 2xl:px-20 text-xl">
+    <header className="flex justify-between items-center px-2 sm:px-12 p-4">
 
-      <Link href={"/"} className="link">Logo</Link>
+      <Link href={"/"} className="btn btn-ghost text-xl sm:text-xs 2xl:text-xl">K@to</Link>
 
-      <Nav />
+      <nav className='sm:flex space-x-4 hidden'>
+        {
+          NavLinks.map((link, i) => (
+            <HeaderLink key={i} href={link.href} text={link.text} />
+          ))
+        }
+      </nav>
+
+      <ThemeSwitcher />
 
     </header>
   )

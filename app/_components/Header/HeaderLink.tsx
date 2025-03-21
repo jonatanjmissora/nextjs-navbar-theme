@@ -8,6 +8,6 @@ export default function HeaderLink({ href, text }: { href: string, text: string 
   const pathname = usePathname()
 
   return (
-    <Link href={href} className={`link border-0 ${pathname === href && "active"}`}>{text}</Link>
+    <Link href={href} className={`btn text-xl sm:text-xs 2xl:text-xl ${pathname === href ? "btn-ghost-active" : "btn-ghost"}`}>{text}</Link>
   )
 }
