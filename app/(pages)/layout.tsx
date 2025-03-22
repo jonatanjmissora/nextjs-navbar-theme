@@ -4,7 +4,7 @@ import Header from "../_components/Header/Header"
 import { ThemeProvider } from "next-themes"
 
 export const metadata = {
-  title: 'Mongodb CRUD',
+  title: 'Nav + Theme',
   description: 'App',
 }
 
