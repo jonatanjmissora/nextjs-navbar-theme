@@ -38,3 +38,12 @@
   --ghost-shadow: 0 0 3px rgb(255, 255, 255, 0.25);
   --shadow: var(--shadow-dark);
 }
+
+[data-theme='dark'] .sun-icon,
+[data-theme='light'] .moon-icon {
+  display: none;
+}
+[data-theme='light'] .sun-icon,
+[data-theme='dark'] .moon-icon {
+  display: visibility;
+}

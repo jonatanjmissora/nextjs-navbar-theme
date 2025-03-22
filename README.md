@@ -27,7 +27,7 @@ This repository was built by [Jonatan Missora](https://github.com/jonatanjmissor
 
 
 
-
-
-
 hacer el movil menu
+
+ver el icono del tema que flashea y produce un error
+

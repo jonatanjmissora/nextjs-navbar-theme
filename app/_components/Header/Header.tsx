@@ -2,12 +2,13 @@
 import Link from 'next/link'
 import HeaderLink from './HeaderLink'
 import { NavLinks } from '@/app/_lib/constants'
-import ThemeSwitcher from './ThemeSwitcher'
+import MobilMenu from './MobilMenu'
+import DesktopThemeSwitcher from './DesktopThemeSwitcher'
 
 export default async function Header() {
 
   return (
-    <header className="flex justify-between items-center px-2 sm:px-12 p-4">
+    <header className="flex justify-between items-center px-6 sm:px-24 py-8 text-[var(--white)]">
 
       <Link href={"/"} className="btn btn-ghost text-xl sm:text-xs 2xl:text-xl">K@to</Link>
 
@@ -19,7 +20,8 @@ export default async function Header() {
         }
       </nav>
 
-      <ThemeSwitcher />
+      <DesktopThemeSwitcher />
+      <MobilMenu />
 
     </header>
   )
