@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes'
 import SunSVG from '../../_assets/SunSVG'
 import MoonSVG from '../../_assets/MoonSVG'
 
-const ThemeSwitcher = ({setShowMenu}: {setShowMenu: (value: boolean) => void}) => {
+const ThemeSwitcher = ({ setShowMenu }: { setShowMenu: (value: boolean) => void }) => {
   const { theme, setTheme } = useTheme()
 
   const handleClick = () => {
@@ -21,7 +21,7 @@ const ThemeSwitcher = ({setShowMenu}: {setShowMenu: (value: boolean) => void}) =
         theme === "light"
 
           ? <SunSVG className="size-8 sm:size-6 2xl:size-7" />
-          : <MoonSVG className="size-8 sm:size-6 2xl:size-7" />
+          : <MoonSVG className="size-8 p-1 sm:size-6 2xl:size-7" />
       }
     </div>
   )
